@@ -27,7 +27,10 @@ app.use((req, res, next) => {
   return;
 });
 
-
+app.get('/get', (req, res) => {
+  console.log("test api")
+  res.send({test: 'arun'})
+})
 const port =  4002 || process.env.PORT;
 
 const server = app.listen( port, () => console.log(`app listing on ${port}`));
