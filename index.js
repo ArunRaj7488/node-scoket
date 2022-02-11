@@ -6,7 +6,7 @@ const cors = require('cors')
 
 const app = express();
 
-app.use(cors());
+// app.use(cors());
 console.log("test server")
 
 app.use((req, res, next) => {
@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 });
 
 
-const port = process.env.PORT || 4002;
+const port =  4002 || process.env.PORT;
 
 const server = app.listen( port, () => console.log(`app listing on ${port}`));
 
