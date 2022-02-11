@@ -36,8 +36,8 @@ const io = socket(server, {
   cors: {
     origin: '*',
     methods: ['GET', 'POST'],
-    credentials: true
-
+    credentials: true,
+    allowedHeaders: ['Access-Control-Allow-Headers','Origin, X-Requeted-With, Content-Type, Accept, Authorization, RBR'],
   }
 });
 
